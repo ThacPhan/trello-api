@@ -6,7 +6,10 @@ import { APIs_V1 } from '~/routes/v1';
 
 // khởi chạy db
 const START_SERVER = () => {
+
   const app = express();
+
+  app.use(express.json())
 
   app.use('/v1', APIs_V1 )
 
